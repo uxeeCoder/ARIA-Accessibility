@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARIA-Accessibility</title>
+    <style>
+      .p {
+        padding-top: 400px;
+      }
+      .pb {
+        padding-bottom: 200px;
+      }
+      .h1 {
+        border: 2px;
+        padding: 5px;
+        background-color: antiquewhite;
+        width: 700px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ARIA-Accessibility</h1>
+    <main style="width: 700px; height: 100vh">
+      <section>
+        <div class="h1">
+          <h2 aria-labelledby="Definition" role="region">
+            ARIA Functionality & Purpose
+          </h2>
+          <p id="Definition">
+            <!-- Definition provided by gitAI helper -->
+            ARIA stands for Accessible Rich Internet Applications. It is a set
+            of attributes that define ways to make web content and web
+            applications more accessible to both machines and people with
+            disabilities. It supplements HTML so that interactions and widgets
+            commonly used in applications can be passed to assistive
+            technologies.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div>
+          <h2>ARIA-label functionality</h2>
+
+          <p>
+            There can be instances when the default accessible name of an
+            element is not appropriate, use the aria-label attribute to define
+            the accessible name of an element. For instance, request user
+            feedback in an input field.
+
+            <input aria-label="Provide Feedback" type="text" />
+          </p>
+        </div>
+        <div>
+          <h2 aria-hidden="true">Use case of ARIA-hidden</h2>
+          <p>
+            ARIA hidden is used to hide the content from the screen readers. It
+            can also be used to give access to hidden content only when a
+            certain condition is met.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2>Section with Navigation role attribute</h2>
+        <div>
+          <nav role="navigation">
+            <ul>
+              <li tabindex="1"><a href="#link-1">Link 1</a></li>
+              <li tabindex="2"><a href="#link-2">Link 2</a></li>
+              <li tabindex="3"><a href="#link-3">Link 3</a></li>
+              <li tabindex="4"><a href="#link-4">Link 4</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <section class="p">
+        <p id="link-1" class="p">
+          This is a sample paragraph to test the navigation role attribute. When
+          the link 1 is clicked, the focus should be on this paragraph.
+        </p>
+        <p id="link-2" class="p">
+          This is a sample paragraph to test the navigation role attribute. When
+          the link 2 is clicked, the focus should be on this paragraph.
+        </p>
+        <p id="link-3" class="p pb">
+          This is a sample paragraph to test the navigation role attribute. When
+          the link 3 is clicked, the focus should be on this paragraph.
+        </p>
+        <p id="link-4" class="p pb">
+          This is a sample paragraph to test the navigation role attribute. When
+          the link 4 is clicked, the focus should be on this paragraph.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
